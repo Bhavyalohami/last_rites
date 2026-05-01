@@ -4,6 +4,7 @@ import { ArrowLeft, LogIn } from 'lucide-react';
 import { loginUser } from '../../api/adminAPI';
 import useAuth from '../../hooks/useAuth';
 import ErrorMessage from '../../components/common/ErrorMessage';
+import assetUrl from '../../utils/assetUrl';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -31,7 +32,7 @@ const Login = () => {
   return (
     <main className="grid min-h-screen bg-[#f8f3ec] text-stone-900 lg:grid-cols-[1fr_0.9fr]">
       <section className="relative hidden overflow-hidden bg-stone-950 text-white lg:block">
-        <img src="/memorial-hero.png" alt="" className="absolute inset-0 h-full w-full object-cover opacity-60" />
+        <img src={assetUrl('/memorial-hero.png')} alt="" className="absolute inset-0 h-full w-full object-cover opacity-60" />
         <div className="absolute inset-0 bg-gradient-to-r from-stone-950 via-stone-950/70 to-stone-950/20" />
         <div className="relative flex h-full flex-col justify-end p-12">
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.22em] text-amber-200">Last Rites</p>

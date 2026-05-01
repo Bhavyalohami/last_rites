@@ -15,6 +15,7 @@ import { getServices, getTestimonials, getObituaries } from '../../api/publicAPI
 import Button from '../../components/UI/Button';
 import Loader from '../../components/common/Loader';
 import ErrorMessage from '../../components/common/ErrorMessage';
+import assetUrl from '../../utils/assetUrl';
 
 const supportSteps = [
   {
@@ -76,7 +77,7 @@ const Home = () => {
     <main className="bg-[#f8f3ec] text-stone-900">
       <section className="relative min-h-[calc(100vh-88px)] overflow-hidden">
         <img
-          src="/memorial-hero.png"
+          src={assetUrl('/memorial-hero.png')}
           alt="A quiet riverside memorial with lamps, petals, and dawn light"
           className="absolute inset-0 h-full w-full object-cover"
         />
@@ -235,7 +236,7 @@ const Home = () => {
               >
                 <div className="aspect-[4/3] overflow-hidden bg-stone-200">
                   <img
-                    src={obit.photo || '/memorial-hero.png'}
+                    src={obit.photo || assetUrl('/memorial-hero.png')}
                     alt={obit.name}
                     className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                   />

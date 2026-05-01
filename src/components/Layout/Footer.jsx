@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { Mail, MapPin, Phone } from 'lucide-react';
+import assetUrl from '../../utils/assetUrl';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -12,7 +13,7 @@ const Footer = () => {
       <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8 lg:px-10">
         <div className="grid gap-10 md:grid-cols-[1.2fr_0.8fr_0.8fr_1fr]">
           <div>
-            <img src="/logo-dark.png" className="mb-5 h-20 w-auto" alt="Last Rites" />
+            <img src={assetUrl('/logo-dark.png')} className="mb-5 h-20 w-auto" alt="Last Rites" />
             <p className="max-w-sm text-sm leading-7 text-stone-400">
               Memorial care, last rites coordination, tribute pages, and family support with dignity and clarity.
             </p>

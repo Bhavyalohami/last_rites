@@ -87,6 +87,7 @@
 import React from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
+import assetUrl from '../../utils/assetUrl';
 
 const Header = () => {
   const { isAuthenticated, user, logout } = useAuth();
@@ -116,7 +117,7 @@ const Header = () => {
       <nav className="mx-auto flex max-w-7xl flex-col gap-3 px-5 py-3 sm:px-8 lg:flex-row lg:items-center lg:justify-between lg:px-10">
         {/* Logo */}
         <NavLink to="/" className="flex items-center justify-center lg:justify-start">
-          <img src="/logo.png" className="h-14 w-auto" alt="Last Rites" />
+          <img src={assetUrl('/logo.png')} className="h-14 w-auto" alt="Last Rites" />
         </NavLink>
 
         {/* Main Navigation */}

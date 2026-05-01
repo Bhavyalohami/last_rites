@@ -4,6 +4,7 @@ import { ArrowLeft, ArrowRight, CalendarDays, Check, Clock, IndianRupee, Phone, 
 import { getServiceById, getServices } from '../../api/publicAPI';
 import Loader from '../../components/common/Loader';
 import ErrorMessage from '../../components/common/ErrorMessage';
+import assetUrl from '../../utils/assetUrl';
 
 const included = [
   'Professional coordination and step-by-step guidance',
@@ -42,7 +43,7 @@ const ServiceDetail = () => {
   return (
     <main className="bg-[#f8f3ec] text-stone-900">
       <section className="relative overflow-hidden bg-stone-950 text-white">
-        <img src={service.image || '/memorial-hero.png'} alt="" className="absolute inset-0 h-full w-full object-cover opacity-50" />
+        <img src={service.image || assetUrl('/memorial-hero.png')} alt="" className="absolute inset-0 h-full w-full object-cover opacity-50" />
         <div className="absolute inset-0 bg-gradient-to-r from-stone-950 via-stone-950/80 to-stone-950/25" />
         <div className="relative mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-10">
           <Link to="/services" className="mb-10 inline-flex items-center gap-2 text-sm font-semibold text-stone-200 hover:text-white">

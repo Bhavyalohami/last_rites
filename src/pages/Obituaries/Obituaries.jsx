@@ -4,6 +4,7 @@ import { ArrowRight, BookOpenText, Calendar, Heart, MapPin, Search } from 'lucid
 import { getObituaries } from '../../api/publicAPI';
 import Loader from '../../components/common/Loader';
 import ErrorMessage from '../../components/common/ErrorMessage';
+import assetUrl from '../../utils/assetUrl';
 
 const formatDate = (dateString) => {
   if (!dateString) return '';
@@ -37,7 +38,7 @@ const Obituaries = () => {
   return (
     <main className="bg-[#f8f3ec] text-stone-900">
       <section className="relative overflow-hidden bg-stone-950 text-white">
-        <img src="/memorial-hero.png" alt="" className="absolute inset-0 h-full w-full object-cover opacity-55" />
+        <img src={assetUrl('/memorial-hero.png')} alt="" className="absolute inset-0 h-full w-full object-cover opacity-55" />
         <div className="absolute inset-0 bg-gradient-to-r from-stone-950 via-stone-950/78 to-stone-950/20" />
         <div className="relative mx-auto grid min-h-[460px] max-w-7xl items-center gap-10 px-5 py-16 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:px-10">
           <div>
@@ -79,7 +80,7 @@ const Obituaries = () => {
               <Link key={obit.id} to={`/obituaries/${obit.id}`} className="group overflow-hidden rounded-lg bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
                 <div className="aspect-[4/3] overflow-hidden bg-stone-200">
                   <img
-                    src={obit.photo || '/memorial-hero.png'}
+                    src={obit.photo || assetUrl('/memorial-hero.png')}
                     alt={obit.name}
                     className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                   />

@@ -4,6 +4,7 @@ import { ArrowLeft, Award, Calendar, Heart, MapPin, Send, Users } from 'lucide-r
 import { getObituaryById } from '../../api/publicAPI';
 import Loader from '../../components/common/Loader';
 import ErrorMessage from '../../components/common/ErrorMessage';
+import assetUrl from '../../utils/assetUrl';
 
 const formatDate = (dateString) => {
   if (!dateString) return '';
@@ -49,7 +50,7 @@ const ObituaryDetail = () => {
   return (
     <main className="bg-[#f8f3ec] text-stone-900">
       <section className="relative overflow-hidden bg-stone-950 text-white">
-        <img src={obit.photo || '/memorial-hero.png'} alt="" className="absolute inset-0 h-full w-full object-cover opacity-45" />
+        <img src={obit.photo || assetUrl('/memorial-hero.png')} alt="" className="absolute inset-0 h-full w-full object-cover opacity-45" />
         <div className="absolute inset-0 bg-gradient-to-r from-stone-950 via-stone-950/82 to-stone-950/25" />
         <div className="relative mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-10">
           <Link to="/obituaries" className="mb-10 inline-flex items-center gap-2 text-sm font-semibold text-stone-200 hover:text-white">

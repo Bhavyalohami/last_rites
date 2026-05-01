@@ -1,5 +1,6 @@
 import React from 'react';
 import { BookOpenText, CheckCircle2, FileText, HeartHandshake, Scale, ScrollText } from 'lucide-react';
+import assetUrl from '../../utils/assetUrl';
 
 const articles = [
   {
@@ -46,7 +47,7 @@ const Resources = () => {
   return (
     <main className="bg-[#f8f3ec] text-stone-900">
       <section className="relative overflow-hidden bg-stone-950 text-white">
-        <img src="/memorial-hero.png" alt="" className="absolute inset-0 h-full w-full object-cover opacity-55" />
+        <img src={assetUrl('/memorial-hero.png')} alt="" className="absolute inset-0 h-full w-full object-cover opacity-55" />
         <div className="absolute inset-0 bg-gradient-to-r from-stone-950 via-stone-950/78 to-stone-950/20" />
         <div className="relative mx-auto grid min-h-[460px] max-w-7xl items-center gap-10 px-5 py-16 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:px-10">
           <div>
