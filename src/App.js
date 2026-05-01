@@ -5,8 +5,10 @@ import AppRoutes from './routes/AppRoutes';
 import './index.css';
 
 function App() {
+  const basename = process.env.NODE_ENV === 'production' ? process.env.PUBLIC_URL : '/';
+
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL || '/'}>
+    <BrowserRouter basename={basename}>
       <ThemeProvider>
         <AppRoutes />
       </ThemeProvider>

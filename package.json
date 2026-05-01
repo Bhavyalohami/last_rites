@@ -2,7 +2,6 @@
   "name": "last_rites",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://bhavyalohami.github.io/last_rites",
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",

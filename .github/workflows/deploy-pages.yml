@@ -34,6 +34,7 @@ jobs:
       - name: Build
         env:
           REACT_APP_API_URL: https://last-rites-backend.vercel.app/api
+          PUBLIC_URL: /last_rites
         run: npm run build
 
       - name: Add SPA fallback
